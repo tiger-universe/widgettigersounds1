@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Tiger Sound Widget</title>
+	<style>
+		#tiger-img {
+			cursor: pointer;
+		}
+		
+		#roar-btn {
+			background-color: #ff921a;
+			color: white;
+			padding: 10px 20px;
+			border: none;
+			border-radius: 5px;
+			font-size: 16px;
+			font-weight: bold;
+			margin-top: 20px;
+			cursor: pointer;
+		}
+
+		.share-btn {
+			background-color: #007bff;
+			color: white;
+			padding: 10px 20px;
+			border: none;
+			border-radius: 5px;
+			font-size: 16px;
+			font-weight: bold;
+			margin-top: 20px;
+			cursor: pointer;
+		}
+	</style>
+</head>
+<body>
+	<img src="https://cdn.shopify.com/s/files/1/0567/3284/4209/files/tiger-roaring-img.jpg?v=1679389115" alt="Tiger Roaring" id="tiger-img">
+	<button id="roar-btn">Click to hear the tiger roaring</button>
+	<audio id="tiger-roar">
+		<source src="https://cdn.shopify.com/s/files/1/0567/3284/4209/files/TIGER_ROAR_Angry.wav" type="audio/wav">
+	</audio>
+	<script>
+		var tigerRoar = document.getElementById("tiger-roar");
+		var tigerImg = document.getElementById("tiger-img");
+		var roarBtn = document.getElementById("roar-btn");
+		
+		tigerImg.addEventListener("click", function() {
+			tigerRoar.play();
+		});
+		
+		roarBtn.addEventListener("click", function() {
+			tigerRoar.play();
+		});
+		
+		function getIframeCode() {
+			return '<iframe src="' + window.location.href + '" width="300" height="200" frameborder="0"></iframe>';
+		}
+	</script>
+	<button class="share-btn" onclick="alert(getIframeCode())">
+		Share
+	</button>
+	<button class="share-btn">
+		<a href="https://www.tiger-universe.com" target="_blank" style="text-decoration: none; color: white;">Tiger Roaring by Tiger-Universe Store</a>
+	</button>
+</body>
+</html>
+
