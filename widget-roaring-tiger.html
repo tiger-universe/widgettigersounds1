@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Tiger Sound Widget</title>
+	<style>
+		#tiger-img {
+			cursor: pointer;
+		}
+	</style>
+</head>
+<body>
+	<img src="https://cdn.shopify.com/s/files/1/0567/3284/4209/files/tiger-roaring-img.jpg?v=1679389115" alt="Tiger Roaring" id="tiger-img">
+	<audio id="tiger-roar">
+		<source src="https://cdn.shopify.com/s/files/1/0567/3284/4209/files/TIGER_ROAR_Angry.wav" type="audio/wav">
+	</audio>
+	<script>
+		var tigerRoar = document.getElementById("tiger-roar");
+		var tigerImg = document.getElementById("tiger-img");
+		
+		tigerImg.addEventListener("click", function() {
+			tigerRoar.play();
+		});
+	</script>
+</body>
+</html>
