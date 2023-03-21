@@ -1,61 +1,70 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="UTF-8">
-	<title>Tiger Sound Widget</title>
-	<style>
-		#tiger-img {
-			cursor: pointer;
-			width: 300px;
-			height: 150px;
-		}
-		
-		#roar-btn {
-			background-color: #ff921a;
-			color: white;
-			padding: 10px 20px;
-			border-radius: 5px;
-			font-size: 18px;
-			border: none;
-			cursor: pointer;
-			margin-top: 10px;
-		}
-		
-		#share-btn {
-			background-color: black;
-			color: white;
-			padding: 10px 20px;
-			border-radius: 5px;
-			font-size: 18px;
-			border: none;
-			cursor: pointer;
-			margin-top: 10px;
-		}
-	</style>
+    <meta charset="UTF-8">
+    <title>Tiger Sound Widget</title>
+    <style>
+        #tiger-img {
+            cursor: pointer;
+            width: 300px;
+            height: 150px;
+        }
+
+        #widget-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 10px;
+        }
+
+        #roar-btn {
+            background-color: #ff921a;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 18px;
+            border: none;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        #share-btn {
+            background-color: black;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 18px;
+            border: none;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+    </style>
 </head>
 <body>
-	<img src="https://cdn.shopify.com/s/files/1/0567/3284/4209/files/tiger-roaring-img.jpg?v=1679389115" alt="Tiger Roaring" id="tiger-img">
-	<audio id="tiger-roar">
-		<source src="https://cdn.shopify.com/s/files/1/0567/3284/4209/files/TIGER_ROAR_Angry.wav" type="audio/wav">
-	</audio>
-	<button id="roar-btn">Click to hear the tiger roaring</button>
-	<button id="share-btn">Share Widget</button>
-	<br>
-	<a href="https://www.tiger-universe.com">Tiger Roaring by Tiger-Universe Store</a>
-	<script>
-		var tigerRoar = document.getElementById("tiger-roar");
-		var tigerImg = document.getElementById("tiger-img");
-		var roarBtn = document.getElementById("roar-btn");
-		var shareBtn = document.getElementById("share-btn");
-		
-		roarBtn.addEventListener("click", function() {
-			tigerRoar.play();
-		});
+    <div id="widget-container">
+        <img src="https://cdn.shopify.com/s/files/1/0567/3284/4209/files/tiger-roaring-img.jpg?v=1679389115" alt="Tiger Roaring" id="tiger-img">
+        <audio id="tiger-roar">
+            <source src="https://cdn.shopify.com/s/files/1/0567/3284/4209/files/TIGER_ROAR_Angry.wav" type="audio/wav">
+        </audio>
+        <button id="roar-btn">Click to hear the tiger roaring</button>
+        <button id="share-btn">Share Widget</button>
+        <br>
+        <a href="https://www.tiger-universe.com">Tiger Roaring by Tiger-Universe Store</a>
+    </div>
+    <script>
+        var tigerRoar = document.getElementById("tiger-roar");
+        var tigerImg = document.getElementById("tiger-img");
+        var roarBtn = document.getElementById("roar-btn");
+        var shareBtn = document.getElementById("share-btn");
 
-		shareBtn.addEventListener("click", function() {
-			var iframeCode = "<iframe src='" + window.location.href + "' style='width:300px; height:150px;'></iframe>";
-			alert("Copy and paste this iframe code wherever you want to display the widget:\n\n" + iframeCode);
-		});
-	</script>
+        roarBtn.addEventListener("click", function() {
+            tigerRoar.play();
+        });
+
+        shareBtn.addEventListener("click", function() {
+            var iframeCode = "<iframe src='" + window.location.href + "' style='width:300px; height:150px;'></iframe>";
+            alert("Copy and paste this iframe code wherever you want to display the widget Tiger Roar !:\n\n" + iframeCode);
+        });
+    </script>
 </body>
 </html>
